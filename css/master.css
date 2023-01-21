@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+
+}
+main {
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    margin: 50px auto;
+    background-color: var(--Violet);
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px;
+}
+.container {
+
+}
+.container .logo {
+    margin-bottom: 50px;
+    width: 150px;
+}
+.container .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .content > img {
+    width: 650px;
+}
+.container .content .text {
+    width: 400px;
+    margin-top: 50px;
+}
+.container .content .text h3 {
+    font-size: 29px;
+    line-height: 1.5;
+    width: 300px;
+    margin-bottom: 20px;
+}
+.container .content .text h3 + p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.container .content .text h3 + p + button {
+    border: none;
+    height: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border-radius: 50px;
+}
+.container .content .text h3 + p + button a {
+    color: var(--Violet);
+    text-decoration: none;
+}   
+.container .social {
+    display: flex;
+    width: 100px;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+}
+.container .social i {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 10px;
+    padding: 8px;
+    font-size: 12px;
+}
+.container .content .text h3 + p + button:hover {
+    background-color: var(--Soft-Magenta);
+    cursor: pointer;
+}
+.container .content .text h3 + p + button:hover a {
+    color: white;
+}
+.container .social i:hover {
+    border-color: var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    main {
+        width: 375px;
+        margin-top: 0;
+    }
+    .container .content > img {
+        width: 250px;
+    }
+    .container .content .text {
+        text-align: center;
+    }
+    .container .content .text h3 {
+        font-size: 24px;
+    }
+    .container .content .text h3 + p + button {
+        margin: auto;
+    }
+    .container .social {
+        margin: 50px auto;
+    }
+}
